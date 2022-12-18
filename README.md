@@ -1,16 +1,10 @@
 # event_scheduler_app
 
-A new Flutter project.
+A new basic Flutter project.
 
-## Getting Started
+The Event Scheduler App is a 2-page mobile application made using flutter on android studio. 
 
-This project is a starting point for a Flutter application.
+App can take 3 line inputs - Date, Event Name and Time and can display it on the home page of the app.
 
-A few resources to get you started if this is your first Flutter project:
+Experiments with UI has been done by adding background images, scrolling physics, size-changing text fields, etc.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
