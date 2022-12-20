@@ -10,14 +10,13 @@ class Home extends StatefulWidget{
   @override
   State<Home> createState() => _HomeState();
 }
-
 class _HomeState extends State<Home> {
   int currentIndex=0;
   final List<Widget> _list=[];
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.red.shade300,
       appBar: AppBar(
         title: Text('Event Scheduler',style: TextStyle(fontSize: 25)),
         centerTitle: true,
@@ -25,11 +24,35 @@ class _HomeState extends State<Home> {
       ),
       //--------------------------------------------------------------------
       body: ListView.builder(
-        padding: EdgeInsets.only(top: 50,bottom: 45,left: 50,right: 50),
-            itemCount: _list.length,
-            itemBuilder: ((context,index)=>_list[index])),
-
-
+          itemCount: _list. length,
+          itemBuilder: (context, index) {
+            return Container(
+              height: 80,
+                // decoration: BoxDecoration(
+                //   shape: BoxShape.rectangle,
+                //   border: Border.all(width: 4,color: Colors.red),
+                //   borderRadius: BorderRadius.circular(20.0),
+                //     color: Colors.white,
+                // ),
+                child: Center(
+                    child: ListTile(
+                      textColor: Colors.black,
+                      leading: Icon(Icons.schedule,color: Colors.black54,),
+                      trailing: Image.asset(
+                          'assets/pngtree-one-line-drawing-eagle-bird-'
+                              'flying-continuous-vector-illustration-minimalism'
+                              '-design-png-image_5046950-removebg-preview.png'),
+                      tileColor: Colors.red.shade100,
+                      title: _list[index],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    )
+                ),
+            );
+          }
+      ),
+      //-----------------------------------------------------------------------
       floatingActionButton: Builder(
         builder: (context) {
           return FloatingActionButton(
